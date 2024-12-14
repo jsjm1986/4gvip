@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>四格漫画生成器-Waryts.com内部会员专属</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="verificationOverlay" class="verification-overlay">
+        <div class="verification-container">
+            <h2>访问验证</h2>
+            <p>请输入验证码以继续访问</p>
+            <div class="verification-code">
+                <span id="codeDisplay">Waryts.com</span>
+                <button id="copyCode" class="copy-btn">复制</button>
+            </div>
+            <div class="verification-input">
+                <input type="text" id="verificationInput" placeholder="请输入验证码">
+                <button id="verifyBtn" class="verify-btn">验证</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="mainContent" class="container" style="display: none;">
+        <h1>AI四格漫画生成器-Waryts.com内部会员专属</h1>
+        
+        <div class="input-section">
+            <div class="form-group">
+                <label for="storyTitle">故事标题：</label>
+                <input type="text" id="storyTitle" placeholder="请输入故事标题">
+            </div>
+            
+            <div class="form-group">
+                <label for="storyBackground">故事背景：</label>
+                <textarea id="storyBackground" placeholder="请描述故事的大致背景和情节"></textarea>
+            </div>
+            
+            <button id="generateBtn" class="primary-btn">生成四格漫画</button>
+        </div>
+
+        <div class="loading" id="loading" style="display: none;">
+            <div class="spinner"></div>
+            <div class="progress-container">
+                <p id="progressText" class="progress-text">准备开始...</p>
+                <div class="progress-steps">
+                    <div class="step">
+                        <div class="step-dot" id="step1"></div>
+                        <span>故事构思</span>
+                    </div>
+                    <div class="step">
+                        <div class="step-dot" id="step2"></div>
+                        <span>场景优化</span>
+                    </div>
+                    <div class="step">
+                        <div class="step-dot" id="step3"></div>
+                        <span>绘图生成</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="result-section" id="resultSection" style="display: none;">
+            <h2>生成结果</h2>
+            <div class="comic-container">
+                <div class="story-description"></div>
+                <div class="comic-grid">
+                    <div class="comic-panel">
+                        <div class="panel-number">1</div>
+                        <div class="image-container">
+                            <img id="panel1" alt="第一格">
+                        </div>
+                        <div class="scene-description">
+                            <p id="prompt1" class="prompt-text"></p>
+                        </div>
+                    </div>
+                    <div class="comic-panel">
+                        <div class="panel-number">2</div>
+                        <div class="image-container">
+                            <img id="panel2" alt="第二格">
+                        </div>
+                        <div class="scene-description">
+                            <p id="prompt2" class="prompt-text"></p>
+                        </div>
+                    </div>
+                    <div class="comic-panel">
+                        <div class="panel-number">3</div>
+                        <div class="image-container">
+                            <img id="panel3" alt="第三格">
+                        </div>
+                        <div class="scene-description">
+                            <p id="prompt3" class="prompt-text"></p>
+                        </div>
+                    </div>
+                    <div class="comic-panel">
+                        <div class="panel-number">4</div>
+                        <div class="image-container">
+                            <img id="panel4" alt="第四格">
+                        </div>
+                        <div class="scene-description">
+                            <p id="prompt4" class="prompt-text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
